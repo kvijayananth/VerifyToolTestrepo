@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "temp-e897d": {
+      "hosting": {
+        "VerifyToolTest": [
+          "temp-e897d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "temp-e897d"
+  }
+}
