@@ -6,9 +6,17 @@
           "temp-e897d"
         ]
       }
+    },
+    "verifytesttool-fcc96": {
+      "hosting": {
+        "VerifyToolTest": [
+          "verifytesttool-fcc96"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "temp-e897d"
+    "default": "temp-e897d",
+    "VerifyToolTest": "verifytesttool-fcc96"
   }
 }
