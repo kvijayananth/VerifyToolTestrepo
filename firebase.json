@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist\\VeriftToolTest",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
