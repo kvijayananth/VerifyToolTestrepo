@@ -11,6 +11,8 @@ case 2; With loggedin Flag-> we need to run rxfire/angularfirestore code after l
           [icon]="['fas', 'sign-out-alt']"></fa-icon>
     </button>
   </mat-toolbar>
-  <div *ngFor="let item of myarraydisplay.item">
+  <div *ngFor="let item of myarraydisplay.Items">
+    <pre>{{ item.TestDescription }}</pre>
     <pre>{{ item | json }}</pre>
   </div>
+
