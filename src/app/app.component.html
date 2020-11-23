@@ -1,4 +1,3 @@
-case 2; With loggedin Flag-> we need to run rxfire/angularfirestore code after logged in
   <mat-toolbar color="primary">
     VerifyToolTest
     
@@ -11,3 +10,8 @@ case 2; With loggedin Flag-> we need to run rxfire/angularfirestore code after l
           [icon]="['fas', 'sign-out-alt']"></fa-icon>
     </button>
   </mat-toolbar>
+    <div *ngIf="myitemsdisplay | async as userone">
+      <div *ngFor="let item of userone.Items "> <!--Manoj change to item>
+        <pre>{{ item.description }}</pre>
+      </div>
+    </div>  
