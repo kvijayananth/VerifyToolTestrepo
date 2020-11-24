@@ -11,15 +11,12 @@ import { take }from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
-export class AppComponent  {
-  title(title: any) {
-    throw new Error('Method not implemented.');
-  }
+export class AppComponent implements OnDestroy {
   loggedin = false;
   subAuth: Subscription;
-  myarraydisplay:[]=[];
+  myarraydisplay: [] = [];
   myitemsdisplay: Observable<any> | undefined
+
 
   constructor(public afAuth: AngularFireAuth, public tutorialService: UserdataService) {
 
@@ -27,13 +24,14 @@ export class AppComponent  {
       if (res && res.uid) {
         this.loggedin = true;
         this.myitemsdisplay=this.tutorialService.getDocumentData('TestAngular','TestMain', 'TestSub').pipe(take(1));
+        console.log(this.myitemsdisplay);
       } else {
         this.loggedin = false;
       }
     });
-  }
-  ngOnDestroy() {
-    this.subAuth.unsubscribe();
-  }
+}
 
+ngOnDestroy() {
+ this.subAuth.unsubscribe();
+}
 }
